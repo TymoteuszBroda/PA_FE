@@ -1,7 +1,6 @@
-/* Custom styles for full-page auth card */
+
 .min-vh-100 {
   min-height: calc(100vh - 80px);
-  /* Adjust for navbar height */
 }
 
 .fs-0 {
