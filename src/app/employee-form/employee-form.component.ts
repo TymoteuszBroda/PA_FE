@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Employee } from '../../_models/Employee';
-import { EmployeeService } from '../_services/employee.service';
+import { EmployeeService } from '../../_services/employee.service';
 import { ResourceLoader } from '@angular/compiler';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
