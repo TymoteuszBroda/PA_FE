@@ -6,5 +6,6 @@ import { LicenceTableComponent } from './licence-table/licence-table.component';
 export const routes: Routes = [
   { path: '', component: EmployeeTableComponent },
   { path: 'create', component: EmployeeFormComponent },
-  {path: 'licences', component:LicenceTableComponent}
+  { path: 'licences', component: LicenceTableComponent },
+  { path: 'edit/:id', component: EmployeeFormComponent },
 ];
