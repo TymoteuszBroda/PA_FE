@@ -1,7 +1,7 @@
 export interface AssignLicenceDTO {
-  Id: number;
-  EmployeeId: number;
-  LicenceId: number;
-  EmployeeName: string;
-  LicenceName: string;
+  id: number; // was Id
+  employeeId: number; // was EmployeeId
+  licenceId: number; // was LicenceId
+  employeeName: string; // was EmployeeName
+  licenceName: string; // was LicenceName
 }

@@ -65,7 +65,7 @@ export class EmployeeDetailsComponent implements OnInit {
       this.licenceService.deleteAssignedLicence(assignmentId).subscribe({
         next: () => {
           this.assignedLicences = this.assignedLicences.filter(
-            (al) => al.Id !== assignmentId
+            (al) => al.id !== assignmentId
           );
         },
         error: (err) =>
