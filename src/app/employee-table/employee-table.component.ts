@@ -38,6 +38,9 @@ export class EmployeeTableComponent {
     });
   }
   editEmployee(id: number): void {
-    this.router.navigate(['edit/', id]);
+    this.router.navigate(['editEmployee/', id]);
+  }
+  showEmployeeDetails(id: number): void{
+    this.router.navigate(['employeeDetails/', id]);
   }
 }

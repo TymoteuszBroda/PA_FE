@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { Observable } from 'rxjs';
 import { Licence } from '../_models/Licence';
+import { AssignLicenceDTO } from '../_models/AssignLicenceDTO';
 @Injectable({
   providedIn: 'root',
 })
@@ -30,4 +31,20 @@ export class LicenceService {
   editLicence(licence : Licence): Observable<Licence>{
     return this.http.put<Licence>(`${this.apiUrl}/${licence.id}`, licence)
   }
+
+
+
+  getLicencesByEmployeeId(employeeId: number): Observable<AssignLicenceDTO[]> {
+    return this.http.get<AssignLicenceDTO[]>(
+      `${this.apiUrl}/assigned-licences/employee/${employeeId}`
+    );
+  }
+
+  deleteAssignedLicence(assignmentId: number): Observable<void> {
+    return this.http.delete<void>(
+      `${this.apiUrl}/assigned-licences/${assignmentId}`
+    );
+  }
+
+
 }

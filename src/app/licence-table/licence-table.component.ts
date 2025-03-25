@@ -32,7 +32,7 @@ export class LicenceTableComponent {
     });
   }
   editLicence(id: number): void{
-    this.router.navigate(['edit/', id]);
+    this.router.navigate(['editLicence/', id]);
   }
 
     decreaseQuantity(licence: Licence): void {
