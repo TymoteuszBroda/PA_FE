@@ -43,4 +43,11 @@ export class LicenceService {
       `${this.apiUrl}/assigned-licences/${assignmentId}`
     );
   }
+
+  assignLicence(assignDto: AssignLicenceDTO): Observable<AssignLicenceDTO> {
+    return this.http.post<AssignLicenceDTO>(
+      `${this.apiUrl}/assign-licence`,
+      assignDto
+    );
+  }
 }

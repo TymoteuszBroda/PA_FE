@@ -3,13 +3,13 @@ import { Employee } from '../../_models/Employee';
 import { AssignLicenceDTO } from '../../_models/AssignLicenceDTO';
 import { EmployeeService } from '../../_services/employee.service';
 import { LicenceService } from '../../_services/licence.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   styleUrls: ['./employee-details.component.css'],
 })
 export class EmployeeDetailsComponent implements OnInit {
