@@ -59,7 +59,20 @@ export class AssignLicenseComponent implements OnInit {
 
     this.licenceService.assignLicence(assignDto).subscribe({
       next: () => {
-        this.router.navigate([`/employee-details/${this.employeeId}`]);
+        const assignedLicence = this.licences.find(
+          (l) => l.id === this.selectedLicenceId
+        );
+        if (assignedLicence) {
+          assignedLicence.quantity--;
+
+          if (assignedLicence.quantity === 0) {
+            this.licences = this.licences.filter(
+              (l) => l.id !== this.selectedLicenceId
+            );
+          }
+        }
+
+        this.selectedLicenceId = null;
       },
       error: (err) => {
         this.errorMessage = `Error assigning license: ${err.message}`;
