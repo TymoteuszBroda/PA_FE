@@ -68,8 +68,9 @@ export class EmployeeDetailsComponent implements OnInit {
             (al) => al.id !== assignmentId
           );
         },
-        error: (err) =>
-          (this.errorMessage = `Error deleting assignment: ${err.message}`),
+        error: (err) => {
+          this.errorMessage = `Error deleting assignment: ${err.message}`;
+        },
       });
     }
   }
